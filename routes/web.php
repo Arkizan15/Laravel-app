@@ -7,7 +7,7 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about', ['nama' => 'Arkan Rifqy']);
+    return view('about', ['title' => 'About'], ['name' => "Arkan Rifqy"]);
 });
 
 Route::get('/blog', function () {
@@ -15,5 +15,5 @@ Route::get('/blog', function () {
 });
 
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contact', ['title' => 'Contact']);
 });

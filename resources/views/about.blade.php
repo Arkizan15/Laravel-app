@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-</head>
-<body>
-    <a href="/about">about</a>
-    <a href="/">home</a> 
-    <a href="/contact">contact</a>
-    <a href="/blog">blog</a>
-    <h3>Owner <?= $nama; ?></h3>
-    <h1>ini laman about</h1>
-</body>
-</html>
+<x-layout>
+    <x-slot:title>{{$title}}</x-slot>
+    <h3 class="text-xl">This is About page</h3>
+    <p>Nama : {{ $name }}</p>
+</x-layout>
