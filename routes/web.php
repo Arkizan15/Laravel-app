@@ -19,9 +19,7 @@ Route::get('/posts', function () {
 });
 route::get('/post/{slug}', function($slug){
     $posts = Post::all();
-    $post = Arr::first($posts, function ($post) use($slug){
-        return $post['slug'] == $slug;
-    });
+    $post =  Post::find($slug);
     return view('post', ['title' => 'Single Post', 'post' => $post]);
 });
 
