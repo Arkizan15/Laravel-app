@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    
     /**
      * Run the migrations.
      */
@@ -15,8 +16,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('author');
-            $table->string('slug');
-            $table->text('body')->unique();
+            $table->string('slug')->unique();
+            $table->text('body');
             
             $table->timestamps();
         });
